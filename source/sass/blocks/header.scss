@@ -64,32 +64,28 @@
   background-image: url("/__spritemap#sprite-wrapper_close_icon-view");
   background-repeat: no-repeat;
   background-color: transparent;
-
-  @media (min-width: $tablet-width) {
-    margin: 8px 0 0;
-  }
 }
 
 .header__wrapper {
   display: none;
   list-style: none;
-  padding: 74px 0 35px;
+  padding: 15px 0 50px 15px;
   margin: 0;
-  position: sticky;
+  position: absolute;
   left: 0;
   top: 100px;
   background-color: $color-background-blue;
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0 48px;
+    top: 82px;
+    padding: 31px 0 69px 45px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 21px;
     padding: 0;
-    position: absolute;
     width: auto;
     background-color: transparent;
     top: 51%;
