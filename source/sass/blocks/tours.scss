@@ -5,6 +5,7 @@
   @media (min-width: $tablet-width) {
     width: 678px;
     overflow: hidden;
+    position: relative;
   }
 
   picture {
@@ -16,6 +17,10 @@
   position: relative;
   margin: 0;
   padding: 39px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 35px;
+  }
 
   &::before {
     content: "Ближайшие туры";
@@ -32,13 +37,23 @@
     @media (min-width: $tablet-width) {
       font-size: 40px;
       line-height: 40px;
-      top: 23px;
+      top: 45px;
     }
 
     @media (min-width: $desktop-width) {
       font-size: 55px;
       line-height: 55px;
     }
+  }
+}
+
+.tours__button-block {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    top: 60px;
+    right: 0;
   }
 }
 
