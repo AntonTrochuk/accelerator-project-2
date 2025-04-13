@@ -105,7 +105,7 @@ const toursSlider = new Swiper(toursSwiper, {
 
     768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 18,
     },
 
     320: {

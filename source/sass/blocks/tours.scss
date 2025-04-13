@@ -2,6 +2,11 @@
   width: 290px;
   margin: 0 auto;
 
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    overflow: hidden;
+  }
+
   picture {
     display: flex;
   }
@@ -27,6 +32,7 @@
     @media (min-width: $tablet-width) {
       font-size: 40px;
       line-height: 40px;
+      top: 23px;
     }
 
     @media (min-width: $desktop-width) {
@@ -189,4 +195,26 @@
   background-size: 14px 9px;
   background-position: center;
   background-color: $color-background-blue;
+}
+
+.tours__link {
+  color: $color-button-additional;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  justify-content: center;
+  margin: 35px 0 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 12px;
+    background-image: url("/__spritemap#sprite-tours_small_arrow-view");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
