@@ -194,3 +194,61 @@ const trainingSlider = new Swiper(trainingSwiper, {
 });
 
 trainingSlider.navigation.update();
+
+const reviewsSwiper = document.querySelector('.reviews-swiper');
+const reviewsSlider = new Swiper(reviewsSwiper, {
+
+  modules: [Navigation],
+  loop: false,
+  speed: 500,
+
+  slidesPerView: 'auto',
+  centeredSlides: false,
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 1.61,
+      spaceBetween: 120,
+    },
+
+    768: {
+      slidesPerView: 1.19,
+      spaceBetween: 30,
+    },
+
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+  },
+
+  navigation: {
+    nextEl: '.reviews__header-button--next',
+    prevEl: '.reviews__header-button--prev',
+    lockClass: 'disabled',
+  },
+
+  on: {
+    init: function() {
+      this.navigation.update();
+    },
+    slideChange: function() {
+      this.navigation.update();
+    },
+    reachBeginning: function() {
+      this.navigation.prevEl.classList.add('disabled');
+    },
+    reachEnd: function() {
+      this.navigation.nextEl.classList.add('disabled');
+    },
+    fromEdge: function() {
+      this.navigation.prevEl.classList.remove('disabled');
+      this.navigation.nextEl.classList.remove('disabled');
+    },
+    slidesLengthChange: function() {
+      this.navigation.update();
+    }
+  }
+});
+
+reviewsSlider.navigation.update();
