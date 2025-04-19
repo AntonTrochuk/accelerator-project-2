@@ -90,24 +90,19 @@ heroSlider.update();
 
 const toursSwiper = document.querySelector('.tours-swiper');
 const toursSlider = new Swiper(toursSwiper, {
-
   modules: [Navigation],
-
-  loop: true,
+  loop: false,
   speed: 500,
-  effect: 'fade',
 
   breakpoints: {
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
     },
-
     768: {
       slidesPerView: 2,
       spaceBetween: 18,
     },
-
     320: {
       slidesPerView: 1,
       spaceBetween: 30,
@@ -117,20 +112,40 @@ const toursSlider = new Swiper(toursSwiper, {
   navigation: {
     nextEl: '.tours__button--next',
     prevEl: '.tours__button--prev',
-    lockClass: 'disabled',
+    disabledClass: 'disabled',
   },
+
+  on: {
+    init: function() {
+      this.navigation.update();
+    },
+    slideChange: function() {
+      this.navigation.update();
+    },
+    reachBeginning: function() {
+      this.navigation.prevEl.classList.add('disabled');
+    },
+    reachEnd: function() {
+      this.navigation.nextEl.classList.add('disabled');
+    },
+    fromEdge: function() {
+      this.navigation.prevEl.classList.remove('disabled');
+      this.navigation.nextEl.classList.remove('disabled');
+    },
+    slidesLengthChange: function() {
+      this.navigation.update();
+    }
+  }
 });
 
-toursSlider.update();
+toursSlider.navigation.update();
 
 const trainingSwiper = document.querySelector('.training-swiper');
 const trainingSlider = new Swiper(trainingSwiper, {
 
   modules: [Navigation],
-
-  loop: true,
+  loop: false,
   speed: 500,
-  effect: 'fade',
 
   breakpoints: {
     1200: {
@@ -154,6 +169,28 @@ const trainingSlider = new Swiper(trainingSwiper, {
     prevEl: '.training__header-button--prev',
     lockClass: 'disabled',
   },
+
+  on: {
+    init: function() {
+      this.navigation.update();
+    },
+    slideChange: function() {
+      this.navigation.update();
+    },
+    reachBeginning: function() {
+      this.navigation.prevEl.classList.add('disabled');
+    },
+    reachEnd: function() {
+      this.navigation.nextEl.classList.add('disabled');
+    },
+    fromEdge: function() {
+      this.navigation.prevEl.classList.remove('disabled');
+      this.navigation.nextEl.classList.remove('disabled');
+    },
+    slidesLengthChange: function() {
+      this.navigation.update();
+    }
+  }
 });
 
-trainingSlider.update();
+trainingSlider.navigation.update();
