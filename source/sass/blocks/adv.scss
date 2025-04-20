@@ -22,7 +22,7 @@
   position: relative;
   text-align: center;
   margin: 0;
-  padding: 36px 0 37px;
+  padding: 37px 0 36px;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0;
@@ -307,10 +307,6 @@
 .slide-routes div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_routes-view");
-
-    @media (min-width: $tablet-width) {
-      background-image: url("/__spritemap#sprite-adv_routes_tab-view");
-    }
   }
 
   br:nth-child(1) {
