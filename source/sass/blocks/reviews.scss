@@ -1,6 +1,6 @@
 .reviews__container {
   width: 290px;
-  margin: 0 auto 2px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 678px;
@@ -72,8 +72,7 @@
 
 .reviews__list {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 0 0 2px;
 
   @media (min-width: $tablet-width) {
     padding: 0 0 40px;

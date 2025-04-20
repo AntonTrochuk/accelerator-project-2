@@ -22,7 +22,7 @@
   position: relative;
   text-align: center;
   margin: 0;
-  padding: 37px 0 36px;
+  padding: 36px 0 37px;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0;
@@ -36,7 +36,7 @@
     content: "Преимущества";
     display: inline-block;
     position: absolute;
-    top: 20px;
+    top: 22px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 800;
@@ -171,6 +171,10 @@
 .slide-safety div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_safety-view");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("/__spritemap#sprite-adv_safety_tab-view");
+    }
   }
 
   br:nth-child(1) {
@@ -195,6 +199,10 @@
 .slide-expertise div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_expertise-view");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("/__spritemap#sprite-adv_expertise_tab-view");
+    }
   }
 
   br:nth-child(1) {
@@ -245,6 +253,10 @@
 .slide-equipment div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_equipment-view");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("/__spritemap#sprite-adv_equipment_tab-view");
+    }
   }
 
   br:nth-child(2) {
@@ -295,6 +307,10 @@
 .slide-routes div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_routes-view");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("/__spritemap#sprite-adv_routes_tab-view");
+    }
   }
 
   br:nth-child(1) {
@@ -329,6 +345,10 @@
 .slide-nature div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_nature-view");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("/__spritemap#sprite-adv_nature_tab-view");
+    }
   }
 
   br {
@@ -341,7 +361,7 @@
     margin: 20px 4px 15px 0;
 
     @media (min-width: $tablet-width) {
-      margin: 26px 2px 14px 0;
+      margin: 26px 4px 14px 0;
     }
 
     @media (min-width: $desktop-width) {
