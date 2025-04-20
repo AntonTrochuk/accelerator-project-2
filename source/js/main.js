@@ -252,3 +252,50 @@ const reviewsSlider = new Swiper(reviewsSwiper, {
 });
 
 reviewsSlider.navigation.update();
+
+let advSlider = null;
+
+function initAdvSwiper() {
+  const advSwiper = document.querySelector('.adv-swiper');
+
+  if (advSlider) {
+    advSlider.destroy(true, true);
+    advSlider = null;
+  }
+
+  if (window.innerWidth > 1200) {
+    advSlider = new Swiper(advSwiper, {
+      modules: [Navigation],
+      loop: true,
+      speed: 500,
+
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 2,
+          centeredSlides: false,
+        },
+      },
+
+      navigation: {
+        nextEl: '.adv__button--next',
+        prevEl: '.adv__button--prev',
+      },
+    });
+
+    advSlider.navigation.update();
+  } else {
+    advSwiper.style.overflow = 'visible';
+    const slides = advSwiper.querySelectorAll('.swiper-slide');
+    slides.forEach((slide) => {
+      slide.style.width = 'auto';
+      slide.style.transform = 'none';
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initAdvSwiper);
+
+window.addEventListener('resize', initAdvSwiper);
+

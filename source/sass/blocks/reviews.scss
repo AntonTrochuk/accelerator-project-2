@@ -1,9 +1,10 @@
 .reviews__container {
   width: 290px;
-  margin: 0 auto;
+  margin: 0 auto 2px;
 
   @media (min-width: $tablet-width) {
     width: 678px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
