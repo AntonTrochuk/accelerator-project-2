@@ -299,3 +299,54 @@ document.addEventListener('DOMContentLoaded', initAdvSwiper);
 
 window.addEventListener('resize', initAdvSwiper);
 
+
+let gallerySlider = null;
+
+function initGallerySwiper() {
+  const gallerySwiper = document.querySelector('.gallery-swiper');
+
+  if (gallerySlider) {
+    gallerySlider.destroy(true, true);
+    gallerySlider = null;
+  }
+
+  if (window.innerWidth < 1200) {
+    gallerySlider = new Swiper(gallerySwiper, {
+      modules: [Navigation],
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      spaceBetween: 5,
+      slidesPerGroup: 1,
+      centeredSlides: false,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 5
+        },
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 5
+        }
+      },
+
+      navigation: {
+        nextEl: '.gallery__button--next',
+        prevEl: '.gallery__button--prev',
+      },
+    });
+
+    gallerySlider.navigation.update();
+  } else {
+    gallerySwiper.style.overflow = 'visible';
+    const slides = gallerySwiper.querySelectorAll('.swiper-slide');
+    slides.forEach((slide) => {
+      slide.style.width = 'auto';
+      slide.style.transform = 'none';
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initGallerySwiper);
+window.addEventListener('resize', initGallerySwiper);

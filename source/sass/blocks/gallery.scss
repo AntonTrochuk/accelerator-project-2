@@ -1,0 +1,84 @@
+
+.gallery__container {
+  width: 320px;
+  color: $color-text-basic;
+
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 31px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 22px;
+      top: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 16px;
+      line-height: 24px;
+      top: 105px;
+    }
+  }
+}
+
+.gallery__container-description {
+  width: 290px;
+  margin: 0 auto;
+}
+
+.gallery__subtitle {
+  position: relative;
+  margin: 0;
+  padding: 36px 0 27px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 119px 0 27px;
+  }
+
+  &::before {
+    content: "Фотогалерея";
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 26px;
+    opacity: 3%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      top: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+      top: 100px;
+    }
+  }
+}
+
+
+.gallery__list {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__item {
+  picture {
+    display: flex;
+  }
+}
+
+.gallery__item-conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
