@@ -37,7 +37,7 @@
     content: "Преимущества";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 24px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 800;
@@ -86,6 +86,7 @@
 
 .adv__item {
   padding: 19px 9px;
+  box-sizing: border-box;
   border: 1px solid $color-adv-border;
 
   @media (min-width: $tablet-width) {
