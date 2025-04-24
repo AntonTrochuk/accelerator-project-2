@@ -163,16 +163,20 @@
     padding: 0;
     display: block;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11.6px;
     line-height: 18px;
+    letter-spacing: 0.22px;
+    word-spacing: normal;
     color: $color-text-basic;
     box-sizing: border-box;
     width: 270px;
+    text-align: center;
 
     @media (min-width: $tablet-width) {
       width: 284px;
       font-size: 14px;
       line-height: 22px;
+      letter-spacing: normal;
     }
 
     @media (min-width: $desktop-width) {
