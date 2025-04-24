@@ -1,3 +1,43 @@
+.adv {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    z-index: -2;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      top: 166px;
+      width: 2091px;
+      height: 996px;
+      background-image:
+        image-set(
+          url("../../img/background/clouds3_tablet@1x.webp") 1x,
+          url("../../img/background/clouds3_tablet@2x.webp") 2x,
+          url("../../img/background/clouds3_tablet@1x.png") 1x,
+          url("../../img/background/clouds3_tablet@2x.png") 2x
+        );
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -285px;
+      left: 0;
+      width: 2091px;
+      height: 447px;
+      background-image:
+        image-set(
+          url("../../img/background/clouds3_desktop@1x.webp") 1x,
+          url("../../img/background/clouds3_desktop@2x.webp") 2x,
+          url("../../img/background/clouds3_desktop@1x.png") 1x,
+          url("../../img/background/clouds3_desktop@2x.png") 2x
+        );
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 
 .adv__container {
   width: 290px;
@@ -86,8 +126,8 @@
 
 .adv__item {
   padding: 19px 9px;
-  box-sizing: border-box;
   border: 1px solid $color-adv-border;
+  background-color: $color-background-white;
 
   @media (min-width: $tablet-width) {
     padding: 29px 19px;
@@ -100,7 +140,6 @@
 
   h6 {
     margin: 20px 0 15px;
-
     font-weight: 600;
     font-size: 14px;
     line-height: 14px;
@@ -121,10 +160,14 @@
   p {
     font-style: normal;
     margin: 0;
+    padding: 0;
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: $color-text-basic;
+    box-sizing: border-box;
+    width: 270px;
 
     @media (min-width: $tablet-width) {
       width: 284px;
@@ -157,8 +200,11 @@
     display: block;
     width: 42px;
     height: 42px;
-    background-size: contain;
+    border: 1px solid $color-icons-additional;
+    box-sizing: border-box;
     background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
 
     @media (min-width: $tablet-width) {
       width: 48px;
@@ -175,10 +221,6 @@
 .slide-safety div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_safety-view");
-
-    @media (min-width: $tablet-width) {
-      background-image: url("/__spritemap#sprite-adv_safety_tab-view");
-    }
   }
 
   br:nth-child(1) {
@@ -203,10 +245,6 @@
 .slide-expertise div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_expertise-view");
-
-    @media (min-width: $tablet-width) {
-      background-image: url("/__spritemap#sprite-adv_expertise_tab-view");
-    }
   }
 
   br:nth-child(1) {
@@ -257,10 +295,6 @@
 .slide-equipment div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_equipment-view");
-
-    @media (min-width: $tablet-width) {
-      background-image: url("/__spritemap#sprite-adv_equipment_tab-view");
-    }
   }
 
   br:nth-child(2) {
@@ -345,10 +379,6 @@
 .slide-nature div {
   &::before {
     background-image: url("/__spritemap#sprite-adv_nature-view");
-
-    @media (min-width: $tablet-width) {
-      background-image: url("/__spritemap#sprite-adv_nature_tab-view");
-    }
   }
 
   br {
