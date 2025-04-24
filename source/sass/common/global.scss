@@ -249,6 +249,21 @@
   }
 }
 
+.text-fr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .text-s {
   font-weight: 400;
   font-size: 14px;
@@ -352,6 +367,16 @@
   line-height: 16px;
 }
 
+.inputs-nav-text-fr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
 
 .captions-r {
   font-weight: 700;

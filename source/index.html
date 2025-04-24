@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="header__wrapper-item">
-            <a class="header__wrapper-link button-text-b" href="#">
+            <a class="header__wrapper-link button-text-b" href="#contacts">
               Контакты
             </a>
           </li>
@@ -976,10 +976,130 @@
             </li>
           </ul>
         </form>
-
       </div>
     </section>
   </main>
+  <footer class="main-footer footer" data-test="footer">
+    <div class="footer__contacts-block">
+      <div class="footer__contacts-section" id="contacts">
+        <div class="footer__contacts-text-block">
+          <h3 class="footer__contacts-title heading-h3">
+            Контакты
+          </h3>
+          <p>
+            Свяжитесь с нами любым удобным <br>для вас способом или приходите <br>к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.
+          </p>
+        </div>
+        <ul class="footer__contacts-list">
+          <li class="footer__contacts-item item-telephone">
+            <div class="footer__contacts-item-block">
+              <span class="footer__contacts-subtitle heading-h6">
+                Телефон
+              </span>
+              <a class="footer__contacts-link text-fr" href="tel:+79837454545">
+                +7 983 745-45-45
+              </a>
+            </div>
+          </li>
+          <li class="footer__contacts-item item-email">
+            <div class="footer__contacts-item-block">
+              <span class="footer__contacts-subtitle heading-h6">
+                Email
+              </span>
+              <a class="footer__contacts-link text-fr" href="mailto:info@lifetour.com">
+                info@lifetour.com
+              </a>
+            </div>
+          </li>
+          <li class="footer__contacts-item item-address">
+            <div class="footer__contacts-item-block">
+              <span class="footer__contacts-subtitle heading-h6">
+                Адрес
+              </span>
+              <address class="footer__contacts-link text-fr">
+                г. Москва, пр-т Мира, д. 14, офис 101
+              </address>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <picture>
+        <source media="(min-width:1440px)" width="600" height="324" type="image/webp" srcset="./img/footer/map_desktop@1x.webp 1x, ./img/footer/map_desktop@2x.webp 2x">
+        <source media="(min-width: 768px)" width="768" height="340" type="image/webp" srcset="./img/footer/map_tablet@1x.webp 1x, ./img/footer/map_tablet@2x.webp 2x">
+        <source width="320" height="343" type="image/webp" srcset="./img/footer/map_mobile@1x.webp 1x, ./img/footer/map_mobile@2x.webp 2x">
+        <source media="(min-width:1440px)" width="600" height="324" type="image/jpg" srcset="./img/footer/map_desktop@1x.png 1x, ./img/footer/map_desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="768" height="340" type="image/jpg" srcset="./img/footer/map_tablet@1x.png 1x, ./img/footer/map_tablet@2x.png 2x">
+        <img src="./img/footer/map_mobile@1x.png" srcset="./img/footer/map_mobile@2x.png 2x" width="320" height="343" alt="Наше местоположение на карте.">
+      </picture>
+    </div>
+    <div class="footer__main-block">
+      <div class="footer__main-section">
+        <a class="footer__main-logo" href="#">
+          <img src="img/logotype.svg" width="142" height="42" alt="Логотип компании Lifetour.">
+        </a>
+        <ul class="footer__main-list">
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#tours">
+              Туры
+            </a>
+          </li>
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#training">
+              Обучение
+            </a>
+          </li>
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#about">
+              О нас
+            </a>
+          </li>
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#reviews">
+              Отзывы
+            </a>
+          </li>
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#gallery">
+              Фотографии
+            </a>
+          </li>
+          <li class="footer__main-item">
+            <a class="footer__main-link inputs-nav-text-fr" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <a class="footer__link heading-h6" href="tel:+78007253232">
+          8 800 725-32-32
+        </a>
+      </div>
+      <ul class="footer__social-section-list">
+        <li class="footer__social-item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">
+              ВКонтакте
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="social__link social__link--ok" href="https://www.ok.com/user/htmlacademyru">
+            <span class="visually-hidden">
+              Одноклассники
+            </span>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="social__link social__link--reddit" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">
+              Reddit
+            </span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer__confidentiality" href="#">
+        Политика конфиденциальности</a>
+    </div>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 

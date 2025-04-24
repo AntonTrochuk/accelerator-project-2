@@ -1,0 +1,116 @@
+.footer {
+  color: $color-text-basic;
+}
+
+.footer__contacts-section {
+  width: 290px;
+  margin: 0 auto;
+}
+
+.footer__contacts-text-block {
+  margin: 0 0 30px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.footer__contacts-title {
+  position: relative;
+  margin: 0;
+  padding: 36px 0 29px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 135px 0 50px;
+  }
+
+  &::before {
+    content: "Контакты";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 26px;
+    line-height: 26px;
+    color: $color-text-basic;
+    opacity: 3%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      top: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+      top: 105px;
+    }
+  }
+}
+
+.footer__contacts-list {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__contacts-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+
+
+  &::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.item-telephone {
+  &::before {
+    background-image: url("/__spritemap#sprite-footer_icon_phone-view");
+  }
+}
+
+.item-email {
+  &::before {
+    background-image: url("/__spritemap#sprite-footer_icon_mail-view");
+  }
+}
+
+.item-address {
+  &::before {
+    background-image: url("/__spritemap#sprite-footer_icon_pin-view");
+  }
+}
+
+.footer__contacts-item-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__contacts-link {
+  text-decoration: none;
+  color: $color-text-basic;
+}
