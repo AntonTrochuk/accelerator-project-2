@@ -969,16 +969,18 @@
     <section class="main-container__form form" data-test="form">
       <div class="form__container">
         <h3>Остались вопросы?</h3>
-        <p>Заполните форму и наш оператор <br>свяжется <br>с вами для консультации.</p>
+        <p>
+          Заполните форму и наш оператор <br>свяжется <br>с вами для консультации.
+        </p>
         <form action="https://echo.htmlacademy.ru/" method="post" id="form">
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label visually-hidden" for="phone">Телефон</label>
-              <input class="form__input inputs-nav-text" type="number" id="phone" name="phone" placeholder="Телефон" required>
+              <input class="form__input inputs-nav-text" type="number" id="phone" name="phone" placeholder="Телефон" required pattern="[\d\s\-\+\(\)]+">
             </li>
             <li class="form__item">
               <label class="form__label visually-hidden" for="email">Email</label>
-              <input class="form__input inputs-nav-text" type="text" id="email" name="email" placeholder="Email" required>
+              <input class="form__input inputs-nav-text" type="text" id="email" name="email" placeholder="Email" pattern="^[A-Za-zА-Яа-яЁё0-9._%+-]+@[A-Za-zА-Яа-яЁё0-9.-]+\.(рф)$" required>
             </li>
             <li class="form__item">
               <button class="form__button button-text-r" type="submit">

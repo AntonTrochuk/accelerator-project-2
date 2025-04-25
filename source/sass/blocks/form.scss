@@ -126,12 +126,23 @@
   width: 258px;
   box-sizing: border-box;
   padding: 0 0 0 15px;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     height: 56px;
     padding: 0 0 0 30px;
     width: 360px;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.input-error {
+  border-color: $color-error;
 }
 
 .form__button {
