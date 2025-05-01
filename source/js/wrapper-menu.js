@@ -7,13 +7,13 @@ const wrapperMenu = () => {
   const openMenu = () => {
     wrapper.classList.add('wrapper--open');
     buttonClose.classList.add('wrapper-button--close');
-    buttonOpen.classList.remove('wrapper-button--open');
+    buttonOpen.classList.remove('header__wrapper-button--open');
   };
 
   const closeMenu = () => {
     wrapper.classList.remove('wrapper--open');
     buttonClose.classList.remove('wrapper-button--close');
-    buttonOpen.classList.add('wrapper-button--open');
+    buttonOpen.classList.add('header__wrapper-button--open');
   };
 
   buttonOpen.addEventListener('click', openMenu);
