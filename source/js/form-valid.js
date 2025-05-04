@@ -4,27 +4,25 @@ const phoneLabel = document.querySelector('label[for="phone"]');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 
-// Функция для скрытия label и показа placeholder при фокусе
 const handleFocus = (input, label) => {
   input.addEventListener('focus', () => {
-    label.classList.add('visually-hidden'); // Скрываем label
-    input.placeholder = input.getAttribute('placeholder'); // Убедимся, что placeholder виден
+    label.classList.add('visually-hidden');
+    input.placeholder = input.getAttribute('placeholder');
   });
 
   input.addEventListener('blur', () => {
     if (input.value.trim() === '') {
-      label.classList.remove('visually-hidden'); // Показываем label, если поле пустое
+      label.classList.remove('visually-hidden');
     }
   });
 };
 
 const formValid = () => {
-  // Применяем обработчики фокуса к полям
   handleFocus(email, emailLabel);
   handleFocus(phone, phoneLabel);
 
   formButton.addEventListener('click', (evt) => {
-    // Проверка email
+
     if (email.validity.valueMissing) {
       email.setCustomValidity('Пожалуйста, введите Email');
       email.classList.add('input-error');
@@ -39,7 +37,6 @@ const formValid = () => {
     }
     email.reportValidity();
 
-    // Проверка телефона
     if (phone.validity.valueMissing) {
       phone.setCustomValidity('Пожалуйста, введите номер телефона');
       phone.classList.add('input-error');
@@ -55,7 +52,6 @@ const formValid = () => {
     phone.reportValidity();
   });
 
-  // Обработчики для скрытия ошибок при вводе
   email.addEventListener('input', () => {
     if (email.validity.valid) {
       email.classList.remove('input-error');

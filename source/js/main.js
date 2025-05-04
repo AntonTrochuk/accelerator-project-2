@@ -1,4 +1,3 @@
-
 import { wrapperMenu } from './wrapper-menu';
 import { formValid } from './form-valid';
 
@@ -82,7 +81,6 @@ const heroSlider = new Swiper(heroSwiper, {
     }
   }
 });
-
 
 heroSlider.update();
 
@@ -296,7 +294,6 @@ function initAdvSwiper() {
 document.addEventListener('DOMContentLoaded', initAdvSwiper);
 
 window.addEventListener('resize', initAdvSwiper);
-
 
 let gallerySlider = null;
 
