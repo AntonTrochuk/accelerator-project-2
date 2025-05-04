@@ -181,6 +181,26 @@
     line-height: 16px;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
+
+    &:hover::after {
+      border-color: $color-button-additional;
+    }
+
+    &:focus-visible::after {
+      border-color: transparent;
+    }
+
+    &:active::after {
+      border-color: $color-icons-additional;
+      background-color: $color-icons-additional;
+      background-image: url("/__spritemap#sprite-vk_active-view");
+    }
+
+    &:disabled::after {
+      border-color: $color-disabled;
+      background-color: $color-disabled;
+    }
   }
 
   span::after {
@@ -194,6 +214,7 @@
     background-size: 14px 8px;
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: auto;
   }
 
   p {
