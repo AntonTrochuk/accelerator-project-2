@@ -310,6 +310,7 @@
   }
 }
 
+
 .training__instruction-list {
   margin: 0;
   list-style: none;
@@ -318,6 +319,7 @@
   flex-direction: column;
   gap: 25px;
   position: relative;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -332,6 +334,7 @@
     row-gap: 0;
     column-gap: 8px;
     padding: 0 0 62px;
+    flex-wrap: nowrap;
   }
 
   &::after {
@@ -356,6 +359,10 @@
       transform: translateX(16px);
     }
   }
+}
+
+.training__instruction-list li:nth-child(n+5) {
+  display: none;
 }
 
 .training__instruction-item {
