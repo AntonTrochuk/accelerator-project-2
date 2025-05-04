@@ -191,4 +191,28 @@
   @media (min-width: $desktop-width) {
     width: 180px;
   }
+
+  &:hover {
+    border-color: $color-dark-blue;
+    color: $color-dark-blue;
+    background-color: $color-background-white;
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+    color: $color-dark-blue;
+    background-color: $color-background-white;
+  }
+
+  &:active {
+    border-color: $color-dark-blue;
+    color: $color-text-white;
+    background-color: $color-dark-blue;
+  }
+
+  &:disabled {
+    color: $color-text-white;
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+  }
 }
